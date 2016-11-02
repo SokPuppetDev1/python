@@ -1,11 +1,11 @@
+#the function for converting base 10 to base 2
 def biconvert(num):
-    bi=""
-    while num>=1:
-        r=str(num%2)
-        bi=bi+r
-        num=num//2
-    bi=int(bi[::-1])
-    return bi
+    bi=""#innitialises an empty srting to add binary digits to
+    while num!=0: #repeats the appending process untill Num==0
+        bi=bi+str(num%2)#gets the remainder and puts it onto the end of the bi string
+        num=num//2#divides and rounds down num
+    bi=int(bi[::-1]) #mirrors the bi string so that it reads correctly
+    return bi #returnes an INT value of the binary number
 
 #the function for getting a munber (returning an error if it isnt a number in the paramiters)#
 def getnum(minmax,minnum,maxnum): #function structure with internal variable names
