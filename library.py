@@ -1,5 +1,5 @@
 #the function for converting base 10 to base 2
-def biconvert(num):
+def dectobin(num):
     bi=""#innitialises an empty srting to add binary digits to
     while num!=0: #repeats the appending process untill Num==0
         bi=bi+str(num%2)#gets the remainder and puts it onto the end of the bi string
