@@ -8,12 +8,12 @@ def dectobin(num):
     return bi #returnes an INT value of the binary number
 
 #the function for getting a munber (returning an error if it isnt a number in the paramiters)#
-def getnum(minmax,minnum,maxnum): #function structure with internal variable names
+def getnum(minmax,minnum=0,maxnum=0): #function structure with internal variable names
     while True: #a loop that repeats till the correct input is given
         usr=input() #gets the supposesd number
         try: #--------------V
             usr=int(usr)#will try for if the number is an intiger
-            if usr>=minnum and usr<=maxnum or minmax==False: #checks if its within the paramiters defined above
+            if minmax==False or minmax==True and minnum<maxnum and minnum<=usr and maxnum>=usr: #checks if its within the paramiters defined above
                 break #this takes it out of the while loop only when the number is correctly inputted 
             else:
                 print("invalid input")
