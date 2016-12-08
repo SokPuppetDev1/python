@@ -1,6 +1,6 @@
-#################################
-#this is the times table creator#
-#################################
+################################## # # # # # # # # # # #
+#this is the times table creator# # # # # # # # # # # # #
+################################## # # # # # # # # # # # 
 
 import library as l
 
@@ -16,8 +16,8 @@ num1=l.getnum(1,99) #gets the ammount of rows
 print("the second number cannot be higher than 45")
 num2=l.getnum(1,45) #gets the amout of collums
 
-##calculations and output##
 
+##calculations and output##
 for i in range(1,num1+1): #repeats for every row
     num=[] #the list of the numbers in the current row
     for j in range(1,num2+1): #repeats every number in the current row
