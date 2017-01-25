@@ -7,9 +7,11 @@ import pickle
 def dectobin(num):
     bi = "" #innitialises an empty srting to add binary digits to
     while num != 0: #repeats the appending process untill Num==0
+
         #gets remainder and appends to end of bi string
         bi = bi + str(num % 2)
         num = num // 2 #divides and rounds down num
+
     bi = int(bi[::-1]) #mirrors the bi string so that it reads correctly
     return bi #returnes an INT value of the binary number
 
@@ -18,14 +20,18 @@ def dectobin(num):
 def getnum(pos = False, minnum = 0, maxnum = 0):
     #this if statement ditermins if there is a minium and maximum number
     if minnum < maxnum: 
+
         minmax = True
         pos = False #minmax overrides pos
+
     else: minmax = False
 
-    validating = True #used to check that 
+    #used to check that the number is still being validated
+    validating = True
     while validating == True: #loops till the correct input is given
         usr = input("-") #gets the supposesd number
         try: #--------------V
+
             usr = int(usr)#will try for if the input is an intiger
             #checks if the number is positive
             if pos == True and usr > 0 \
@@ -33,9 +39,13 @@ def getnum(pos = False, minnum = 0, maxnum = 0):
                or minmax == True and minnum <= usr and maxnum >= usr \
                #or if its even checking for ether of them
                or pos == False and minmax == False:
+
                 validating = False #used to exit the wile loop
+
             else: print("invalid input") #gives back 'invalid input' if the-
+
         except: print("invalid input") #input wasn't a number or too hight/low
+
     return usr #returns the inputted number if it has met the requirements
 
 
@@ -47,7 +57,9 @@ class Rectangle:
     def __init__(self, length, height):
         self.length = length
         self.height = height
+        #generates area from height and length
         self.area = self.length * self.height
+        #generates parimiter from height and length
         self.parimiter = self.length*2 + self.height*2
 
 
@@ -78,8 +90,11 @@ class Rectangle:
     '''prints the rectangle'''
     def show(self):
         print('#' * self.length)
+
         for i in range(self.height - 1):
             if self.length == 1: print('#')
+
             else: print('#{0}#'.format(' ' * (self.length-2)))
+
         if self.height != 1: print('#' * self.length)
 
